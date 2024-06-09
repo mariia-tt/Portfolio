@@ -12,7 +12,7 @@ This website displays the resumes of a team of 3 people, including their profile
 
 * Responsive design for desktop and mobile devices
 * Hover effects on team member sections
-* Clean and minimalistic design
+* Clean and minimalistic design ,
 
 ## Getting Started
 
