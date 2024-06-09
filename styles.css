@@ -64,3 +64,50 @@ body {
 .extended-resume li {
     margin-bottom: 10px;
 }
+
+.full-resume-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.full-resume-button {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.full-resume-button:hover {
+    background-color: #23527c;
+}
