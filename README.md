@@ -23,3 +23,6 @@ This website displays the resumes of a team of 3 people, including their profile
 ## Contributing
 
 If you'd like to contribute to this project, please fork the repository and submit a pull request.
+=======
+# Portfolio
+>>>>>>> 91d367262e294276cfa7f800495c8d6d12d38243
