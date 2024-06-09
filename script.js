@@ -1,9 +1,7 @@
-// Add event listener to each team member section
-document.querySelectorAll('.team-member').forEach((member) => {
-    member.addEventListener('mouseover', () => {
-        member.style.backgroundColor = '#f7f7f7';
-    });
-    member.addEventListener('mouseout', () => {
-        member.style.backgroundColor = '';
+// Add event listener to each toggle button
+document.querySelectorAll('.toggle-button').forEach((button) => {
+    button.addEventListener('click', () => {
+        const extendedResume = button.nextElementSibling;
+        extendedResume.style.display = extendedResume.style.display === 'block'? 'none' : 'block';
     });
 });
