@@ -6,7 +6,7 @@ This website displays the resumes of a team of 3 people, including their profile
 
 * HTML5
 * CSS3
-* JavaScript (ES6+)
+* JavaScript (ES6+) 
 
 ## Features
 
