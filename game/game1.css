@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
+
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color) ;
+    color: var(--text-color);
+}
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:5;
+}
+
+.game-container {
+  width: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--main-color);
+}
+
+#game-area {
+  border: 1px solid #ccc;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+    background-color: black;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px transparent;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px var(--main-color);
+  }
+
+.stats {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.game-container {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.game-container button {
+  background-color: #00d9ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+.game-container button:hover {
+  background-color: #00aacc;
+}
+#game-area {
+  margin-top: 20px;
+}
+.game-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.game-popup {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.game-popup h1, .game-popup p {
+  color: white;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover {
+	color: red;
+}
+
+#snake-game, #tic-tac-toe, #game2048 {
+	margin-top: 20px;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+#game2048 {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+#game2048 {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+#game2048 td {
+  width: 25%;
+  height: 25%;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#new-game {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#new-game:hover {
+  background: #3e8e41;
+}

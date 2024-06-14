@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balls</title>
+    <link rel="stylesheet" href="game1.css">
+</head>
+<body>
+    <canvas id="game" width="400" height="400" ></canvas>
+    <div>
+<script>
+        var canvas = document.getElementById('game');
+        var context = canvas.getContext('2d');
+
+        var gridSize = 20;
+        var tileSize = canvas.width / gridSize;
+
+        var direction = 'Right';
+        var snake = [{ top: 0, left: 0 }];
+        var apple = null;
+
+        function gameLoop() {
+            var head = Object.assign({}, snake[0]); // copy head
+            switch(direction) {
+                case 'Left':
+                    head.left--;
+                    break;
+                case 'Up':
+                    head.top--;
+                    break;
+                case 'Right':
+                    head.left++;
+                    break;
+                case 'Down':
+                    head.top++;
+                    break;
+            }
+
+            if (apple && apple.top === head.top && apple.left === head.left) {
+                apple = null; // eat the apple
+            } else {
+                snake.pop(); // remove the tail
+            }
+
+            snake.unshift(head);
+
+            // check for game over
+            if (head.left < 0 || head.top < 0 || head.left >= gridSize || head.top >= gridSize) {
+                return gameOver();
+            }
+
+            // spawn a new apple
+            if (apple === null) {
+                apple = { top: Math.floor(Math.random() * gridSize), left: Math.floor(Math.random() * gridSize) };
+            }
+
+            // clear old view
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // draw the snake
+            context.fillStyle = 'green';
+            snake.forEach(function(cell) {
+                context.fillRect(cell.left * tileSize, cell.top * tileSize, tileSize, tileSize);
+            });
+
+            // draw the apple
+            context.fillStyle = 'red';
+            context.fillRect(apple.left * tileSize, apple.top * tileSize, tileSize, tileSize);
+
+            // loop
+            setTimeout(gameLoop, 200);
+        }
+
+        function gameOver() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.fillStyle = 'black';
+            context.fillText('Game Over', canvas.width / 2 - 30, canvas.height / 2); // Виправлення позиції тексту
+        }
+
+        window.addEventListener('keydown', function(e) {
+            switch(e.key) {
+                case 'ArrowLeft':
+                    direction = 'Left';
+                    break;
+                case 'ArrowUp':
+                    direction = 'Up';
+                    break;
+                case 'ArrowRight':
+                    direction = 'Right';
+                    break;
+                case 'ArrowDown':
+                    direction = 'Down';
+                    break;
+            }
+        });
+
+        gameLoop();
+
+    </script>
+    </div>
+    
+</body>
+</html>
